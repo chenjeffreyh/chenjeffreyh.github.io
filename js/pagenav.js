@@ -11,26 +11,26 @@ var main = function() {
 		if($('.content-box').is(':hidden')) {
 			$('.jumbotron').removeClass('jumbotron-reduce');
 			$('.unclipped').toggleClass('clipped');
-			$('.content-box').delay(200).fadeIn(1000);	
+			$('.content-box').delay(200).fadeIn(1000);
 		}
 		if(curActiveContent !== $(this).attr('id')) {
-			$('.content-page').fadeOut(500);	
+			$('.content-page').fadeOut(200);
 		}
 		if($(this).is('#bio')) {
-			$('#bio-content').delay(500).fadeIn(500);
+			$('#bio-content').delay(200).fadeIn(200);
 		}
 		else if($(this).is('#photo')) {
-			$('#photo-content').delay(500).fadeIn(500);
+			$('#photo-content').delay(200).fadeIn(200);
 		}
 		else if($(this).is('#project')) {
-			$('#project-content').delay(500).fadeIn(500);
+			$('#project-content').delay(200).fadeIn(200);
 		}
 		else if($(this).is('#course')) {
-			$('#course-content').delay(500).fadeIn(500);
+			$('#course-content').delay(200).fadeIn(200);
 		}
 		curActiveContent = $(this).attr('id');
 	});
-	
+
 	$('.return').click(function() {
 		$('.content-box').fadeOut(1000);
 		$('.jumbotron').delay(700).addClass('jumbotron-reduce');
@@ -38,4 +38,4 @@ var main = function() {
 	});
 };
 
-$(document).ready(main);	
+$(document).ready(main);
